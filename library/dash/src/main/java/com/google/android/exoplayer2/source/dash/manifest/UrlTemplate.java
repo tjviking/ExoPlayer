@@ -115,6 +115,8 @@ public final class UrlTemplate {
    */
   private static int parseTemplate(String template, String[] urlPieces, int[] identifiers,
       String[] identifierFormatTags) {
+    
+    template = template.replace("#000","#0").replace("#00","#0");
     urlPieces[0] = "";
     int templateIndex = 0;
     int identifierCount = 0;
